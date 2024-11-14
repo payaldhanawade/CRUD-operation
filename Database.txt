@@ -1,0 +1,16 @@
+create database Assignment;
+use Assignment;
+
+-- CategoryMaster table
+CREATE TABLE CategoryMaster (
+    CategoryId INT PRIMARY KEY IDENTITY,
+    CategoryName NVARCHAR(100) NOT NULL
+);
+
+-- ProductMaster table
+CREATE TABLE ProductMaster (
+    ProductId INT PRIMARY KEY IDENTITY,
+    ProductName NVARCHAR(100) NOT NULL,
+    CategoryId INT,
+    FOREIGN KEY (CategoryId) REFERENCES CategoryMaster(CategoryId)
+);
