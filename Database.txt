@@ -14,3 +14,33 @@ CREATE TABLE ProductMaster (
     CategoryId INT,
     FOREIGN KEY (CategoryId) REFERENCES CategoryMaster(CategoryId)
 );
+
+
+-- Insert 10 records into CategoryMaster table
+INSERT INTO CategoryMaster (CategoryName)
+VALUES 
+('Electronics'),
+('Clothing'),
+('Books'),
+('Furniture'),
+('Home Appliances'),
+('Sports'),
+('Toys'),
+('Beauty'),
+('Food'),
+('Automobiles');
+
+
+-- Insert 10 records into ProductMaster table
+INSERT INTO ProductMaster (ProductName, CategoryId)
+VALUES 
+('Smartphone', 1),
+('T-Shirt', 2),
+('Novel', 3),
+('Sofa', 4),
+('Washing Machine', 5),
+('Football', 6),
+('Doll', 7),
+('Lipstick', 8),
+('Cookies', 9),
+('Car', 10);
